@@ -56,7 +56,7 @@ def calculate_fan_speed(highest_temp):
     k = 0.15  # Steepness of the curve
 
     # Minimum and maximum fan speeds
-    min_speed = 10
+    min_speed = 3
     max_speed = 100
 
     # Calculate the speed based on the sigmoid function
