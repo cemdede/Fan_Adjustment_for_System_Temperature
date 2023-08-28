@@ -44,7 +44,7 @@ sudo ipmitool sdr type temperature
 By using these bash codes, I generated the following script that informs the user in real-time regarding the temperature changes and controls the fan speeds.
 I used a sigmoid model for this script, and the simulated outputs are plotted below.
 
-* This is my taste for the fan speed after all, and you can change the script for your own taste.
+* This is my taste for the fan speed after all, but you can change the script to your own taste.
 
 Here's the simulated plot representing the expected values of temperature and fan speeds if you use this script:
 
@@ -59,6 +59,11 @@ Red Zone (70+°C): Critical; immediate action required.
 
 Fan Speed based on Temperature Plot (Right Side):
 The blue curve shows how the fan speed changes as a function of the temperature. The fan speed is represented as a percentage, calculated using the sigmoid function. It's a smooth curve that starts to steeply rise after 60°C, which means the fan will speed up more quickly as the temperature increases beyond that point.
+
+And here is what happens if you'd like to play a bit with the parameters:
+
+![image](https://github.com/cemdede/Fan_Adjustment_for_System_Temperature/assets/14031604/06f406ed-1d11-4dfc-a5d2-0f9c87b5f152)
+
 
 **Concepts and Explanations**
 **Curses**: The curses library allows you to create text-based user interfaces. It handles keyboard input and display formatting, allowing you to make dynamic, terminal-based applications. You initialize it with curses.wrapper(main), which takes care of setup and teardown.
