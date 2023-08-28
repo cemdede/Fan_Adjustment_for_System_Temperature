@@ -1,4 +1,4 @@
-# (FAST) Fan_Adjustment_for_System_Temperature
+(FAST) Fan_Adjustment_for_System_Temperature
 A script that would monitor Dell R730 PowerEdge temperature sensors and manage the fan speeds in real-time.
 
 Here's the simulated plot representing the expected values of temperature and fan speeds:
