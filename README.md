@@ -31,8 +31,7 @@ The blue curve shows how the fan speed changes as a function of the temperature.
 
 **Hex Conversion**: You convert the fan speed to hex before running the ipmitool command. This is probably a requirement from the IPMI's raw command.
 
-**How To Run the program:
-**
+**How To Run the program**:
 Just download, 
 **Run:**chmod +x FAST_Fan_Adjustment_for_System_Temperature.py 
 
