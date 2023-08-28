@@ -1,7 +1,11 @@
 (FAST) Fan_Adjustment_for_System_Temperature
 A script that would monitor Dell R730 PowerEdge temperature sensors and manage the fan speeds in real-time.
 
-Here's the simulated plot representing the expected values of temperature and fan speeds:
+Dell PowerEdge R730 has a habit of being angry and reflects its anger with fan noise if you add any GPU or any other parts that are not from Dell.
+Even though Bios is updated, these problems make it annoying if you're using the server for home labs or a low-budget, old, but powerful and reliable analysis server.
+
+
+Here's the simulated plot representing the expected values of temperature and fan speeds if you use this script:
 
 ![image](https://github.com/cemdede/Fan_Adjustment_for_System_Temperature/assets/14031604/68d8f0c0-b6c9-47e2-89aa-2cc54f2689c7)
 
@@ -27,4 +31,15 @@ The blue curve shows how the fan speed changes as a function of the temperature.
 **Logging**: You're logging the status and changes, which is a best practice. It will help you debug issues and understand the behavior over time.
 
 **Hex Conversion**: You convert the fan speed to hex before running the ipmitool command. This is probably a requirement from the IPMI's raw command.
+
+How To?????:
+
+Just download, 
+Run:
+chmod +x FAST_Fan_Adjustment_for_System_Temperature.py 
+
+Then Run:
+sudo python3 FAST_Fan_Adjustment_for_System_Temperature.py
+
+Cheers!
 
