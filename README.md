@@ -1,5 +1,6 @@
-**(FAST) Fan_Adjustment_for_System_Temperature
-**A script that would monitor Dell R730 PowerEdge temperature sensors and manage the fan speeds in real-time.
+**(FAST) Fan_Adjustment_for_System_Temperature**
+
+A script that would monitor Dell R730 PowerEdge temperature sensors and manage the fan speeds in real-time.
 
 Dell PowerEdge R730 has a habit of being angry and reflects its anger with fan noise if you add any GPU or any other parts that are not from Dell.
 Even though Bios is updated, these problems make it annoying if you're using the server for home labs or a low-budget, old, but powerful and reliable analysis server.
@@ -35,11 +36,11 @@ The blue curve shows how the fan speed changes as a function of the temperature.
 **How To Run the program:
 **
 Just download, 
-**Run:
-**chmod +x FAST_Fan_Adjustment_for_System_Temperature.py 
+**Run:** 
+chmod +x FAST_Fan_Adjustment_for_System_Temperature.py 
 
-**Then Run:
-**sudo python3 FAST_Fan_Adjustment_for_System_Temperature.py
+**Then Run:** 
+sudo python3 FAST_Fan_Adjustment_for_System_Temperature.py
 
 Cheers!
 
