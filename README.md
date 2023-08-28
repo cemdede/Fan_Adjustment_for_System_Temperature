@@ -86,9 +86,5 @@ And here is what happens if you'd like to play a bit with the parameters:
 
 **Then Run**: sudo python3 FAST_Fan_Adjustment_for_System_Temperature.py
 
-
-
-CHEERS !
-
 Cheers!
 
