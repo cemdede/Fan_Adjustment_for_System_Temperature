@@ -2,6 +2,8 @@
 
 A script that would monitor Dell R730 PowerEdge temperature sensors and manage the fan speeds in real-time.
 
+<img width="1029" alt="Screenshot 2023-08-28 at 1 59 09 PM" src="https://github.com/cemdede/Fan_Adjustment_for_System_Temperature/assets/14031604/5cb2de7a-537e-48e9-9202-72fb6beb8d31">
+
 Dell PowerEdge R730 has a habit of being angry and reflects its anger with fan noise if you add any GPU or any other parts that are not from Dell.
 Even though Bios is updated, these problems make it annoying if you use the server for home-labs or as a low-budget, old, powerful, but reliable analysis server.
 
