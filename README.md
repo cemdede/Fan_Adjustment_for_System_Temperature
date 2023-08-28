@@ -3,8 +3,48 @@
 A script that would monitor Dell R730 PowerEdge temperature sensors and manage the fan speeds in real-time.
 
 Dell PowerEdge R730 has a habit of being angry and reflects its anger with fan noise if you add any GPU or any other parts that are not from Dell.
-Even though Bios is updated, these problems make it annoying if you're using the server for home labs or a low-budget, old, but powerful and reliable analysis server.
+Even though Bios is updated, these problems make it annoying if you use the server for home-labs or as a low-budget, old, powerful, but reliable analysis server.
 
+In my case, my R730 was so calm that I added the Tesla P100 16GB GPU for image segmentation-based analysis. The fans started to full throttle from ~2200RPM to 14000RPM. However, by completing IDRAC Bios tests I managed to lower it down to ~8000RPM, which is still noisy. I found a couple of Hex scripts that can be run on bash, but these were not responsive to the changes in the temperatures.
+
+Here are the bash codes if you would like to manually control the fans:
+
+sudo ipmitool raw 0x30 0x30 0x01 0x00
+
+For example, to set the fan speed to 20%:
+sudo ipmitool raw 0x30 0x30 0x02 0xff 0x14
+
+For example, to set the fan speed to 22%:
+sudo ipmitool raw 0x30 0x30 0x02 0xff 0x16
+
+
+ipmitool raw - send raw IPMI command
+0x30 0x30 - IPMI class for fan control
+0x02 - target fan 2
+0xff - apply to all fans
+0x16 - hex value for 22% speed
+The hex values from 0x00 to 0x64 (0 to 100 decimal) map to the percentage range for fan speeds.
+
+So 0x16 hex converts to 22 decimal, setting a 22% fan speed.
+
+To quickly summarize the key points:
+
+Use ipmitool raw for raw IPMI commands
+0x30 0x30 class is for fan control
+Last hex byte sets the percentage (0x16 -> 22%)
+
+
+Monitor fan speed:
+sudo ipmitool sdr type fan
+
+Monitor temperature:
+sudo ipmitool sdr type temperature
+
+
+By using these bash codes, I generated the following script that informs the user in real-time regarding the temperature changes and controls the fan speeds.
+I used a sigmoid model for this script, and the simulated outputs are plotted below.
+
+* This is my taste for the fan speed after all, and you can change the script for your own taste.
 
 Here's the simulated plot representing the expected values of temperature and fan speeds if you use this script:
 
@@ -38,6 +78,10 @@ The blue curve shows how the fan speed changes as a function of the temperature.
 **Run**: chmod +x FAST_Fan_Adjustment_for_System_Temperature.py
 
 **Then Run**: sudo python3 FAST_Fan_Adjustment_for_System_Temperature.py
+
+
+
+CHEERS !
 
 Cheers!
 
