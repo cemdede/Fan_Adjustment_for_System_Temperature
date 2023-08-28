@@ -86,5 +86,10 @@ And here is what happens if you'd like to play a bit with the parameters:
 
 **Then Run**: sudo python3 FAST_Fan_Adjustment_for_System_Temperature.py
 
+IMPORTANT: 
+1)This works for me pretty well (on Ubuntu 22.04.3 LTS Server), but it shouldn't have to work for you.
+2)I tested it on a Cuda job, and it throttles the fans when Cuda is pressuring but pushes the breaks when not.
+3)This is a quick fix, not a permanent fix. To make it permanent, first try it to see if it works for you as intended, then add it to the startup as a service.
+
 Cheers!
 
