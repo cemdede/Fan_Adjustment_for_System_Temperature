@@ -79,8 +79,8 @@ def main(stdscr):
         fan_info = get_fan_info().split('\n')
         temp_info = get_temp_info().split('\n')
 
-        highest_temp = max([extract_numeric_value(s, r"\b(\d+\.?\d*) degrees C\b") for s in temp_info if extract_nu>
-        fan_speeds = [extract_numeric_value(s, r"\b(\d+\.?\d*) RPM\b") for s in fan_info if extract_numeric_value(s>
+        highest_temp = max([extract_numeric_value(s, r"\b(\d+\.?\d*) degrees C\b") for s in temp_info if extract_numeric_value(s, r"\b(\d+\.?\d*) degrees C\b") is not None])
+        fan_speeds = [extract_numeric_value(s, r"\b(\d+\.?\d*) RPM\b") for s in fan_info if extract_numeric_value(s, r"\b(\d+\.?\d*) RPM\b") is not None]
         mean_fan_speed = int(sum(fan_speeds) / len(fan_speeds)) if fan_speeds else 0
 
         logging.info(f"Heat of Highest Temp Sensor: {highest_temp}C")
