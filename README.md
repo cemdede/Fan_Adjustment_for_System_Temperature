@@ -103,7 +103,7 @@ Cheers!
 
 <img width="1047" alt="Screenshot 2023-08-29 at 7 59 55 PM" src="https://github.com/cemdede/Fan_Adjustment_for_System_Temperature/assets/14031604/cedac283-ceab-49a5-ad98-4b8f22b07383">
 
-# Fans and Temperatures can be stable when you don't use too much computing power or GPU, so I had to add a spinner to remind the user that it is running.
+##### Fans and Temperatures can be stable when you don't use too much computing power or GPU, so I had to add a spinner to remind the user that it is running.
 
 
 
