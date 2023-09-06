@@ -109,7 +109,7 @@ Cheers!
 
 ###**Fan_Adjustment_for_System_TemperatureV3**: GPU temperature traction added. 
 
-The tool will also track GPU temperature and generate the fan speed according to the highest of Board & CPU temperatures or GPU temperature.
+The tool will also track GPU temperature and generate the fan speed according to either the highest of Board & CPU temperatures or GPU temperature (whichever is the highest).
 
 <img width="1050" alt="Screenshot 2023-09-06 at 9 19 54 AM" src="https://github.com/cemdede/Fan_Adjustment_for_System_Temperature/assets/14031604/5a5a03fc-14ba-4090-a824-ddde53e034e7">
 
