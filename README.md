@@ -107,7 +107,7 @@ Cheers!
 
 ##################################################
 
-###**Fan_Adjustment_for_System_TemperatureV3**: GPU temperature traction added. 
+###**Fan_Adjustment_for_System_TemperatureV3**: GPU temperature traction (for Nvidia GPUs) added. 
 
 The tool will also track GPU temperature and generate the fan speed according to either the highest of Board & CPU temperatures or GPU temperature (whichever is the highest).
 
